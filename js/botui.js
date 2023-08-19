@@ -53,7 +53,7 @@
         if (res.value == "gg") {
             return botui.message.bot({
                 delay: 1500,
-                content: "![告辞](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1901389031,3540709863&fm=26&gp=0.jpg)"
+                content: "![告辞](https://cdn.jsdelivr.net/gh/iflidrie/img/picsgaoci20%.jpg)"
             })
         }
     });
@@ -93,7 +93,7 @@
         }).then(function(res) {
             return botui.message.bot({
                 delay: 1500,
-                content: "因为drie有多重含意，网络释义：DRIE，全称是Deep Reactive Ion Etching，深反应离子刻蚀，一种微电子干法腐蚀工艺。基于氟基气体的高深宽比硅刻蚀技术。与反应离子刻蚀原理相同，利用硅的各向异性，通过化学作用和物理作用进行刻蚀。Dr~有医生博士的意思，IE~浏览器大家都比较熟悉了或Internet Engineer(互联网工程师)，so~你懂得~"
+                content: "因为drie有多重含意，Dr~有医生博士的意思，IE~浏览器大家都比较熟悉了或Internet Engineer(互联网工程师)，so~你懂得~"
             })
         }).then(function() {
             return botui.action.button({
