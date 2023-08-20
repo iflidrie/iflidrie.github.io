@@ -53,7 +53,7 @@
         if (res.value == "gg") {
             return botui.message.bot({
                 delay: 1500,
-                content: "![告辞](https://cdn.jsdelivr.net/gh/iflidrie/img/picsgaoci20%.jpg)"
+                content: "![告辞](https://cdn.jsdelivr.net/gh/iflidrie/img/picsgaoci20.jpg)"
             })
         }
     });
