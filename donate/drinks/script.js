@@ -11,14 +11,14 @@ var drinks_qrcodes = $('#drinks-qrcodes');
 var drinks_qrcode = $('#drinks-qrcode');
 var isMobile = /Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent);
 
-var GithubLink  =   "https://github.com/kelecn/sponsor-page/";
-var PayPalLink  =   "https://www.paypal.me/kelecn";
+var GithubLink  =   "https://drie.cn/donate/drinks/";
+var PayPalLink  =   "https://www.paypal.me/driecn";
 $('#paypal-donate>a').href = PayPalLink;
 $('#github-box>a').href = GithubLink;
 var qrcodes = {
     'btc_donate'	:	'../simple/images/BTCQR.png',	// 二维码路径
     'alipay_donate'	:	'../simple/images/AliPayQR.png',	// 支付宝二维码
-    'alipay_donate_link'   :   'https://qr.alipay.com/fkx05422rnstyh9yihg7u78',   // 支付宝二维码上的链接，必须换成自己的连接！！！手机点击会自动跳转到支付宝。
+    'alipay_donate_link'   :   'https://qr.alipay.com/fkx10049ftumrrqe9ogkv36',   // 支付宝二维码上的链接，必须换成自己的连接！！！手机点击会自动跳转到支付宝。
     'wechat_donate'	:	'../simple/images/WeChanSQ.png'
 };
 
