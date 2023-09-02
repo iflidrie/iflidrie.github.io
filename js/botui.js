@@ -65,35 +65,45 @@
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
-                content: "国家一级退堂鼓表演者，有过真真切切的温暖，和无比热爱这个世界的渴望。"
+                content: "国家一级退堂鼓表演者，ctrl+C、ctrl+V高级CV工程师🏆"
             })
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
-                content: "略懂HTML/CSS/JavaScript/Java，专攻C/C++/Python"
+                content: "精通Html、CSS、JavaScript、PHP、Java、Python、C、C++、C#、Go、TypeScript等单词的拼写🎲"
             })
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
-                content: "主要工作方向：物流管理、自动化研发"
+                content: "精通Html、CSS、JavaScript、PHP、Java、Python、C、C++、C#、Go、TypeScript等单词的拼写🎲"
             })
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
-                content: "喜欢折腾，热爱折腾，目前正在计算机一道上探索中"
+                content: "熟悉Windows、Linux、Mac、Android、IOS等系统的开关机👻"
+            })
+        }).then(function() {
+            return botui.message.bot({
+                delay: 1500,
+                content: "擅长PS、Pr、Ae、Au、Ai、Dw、An、Id等软件的安装与卸载🎃"
             })
         }).then(function() {
             return botui.action.button({
                 delay: 1500,
                 action: [{
-                    text: "为什么叫 drie 呢？ 🤔",
+                    text: "为什么建站？ 🤔",
                     value: "next"
                 }]
             })
         }).then(function(res) {
             return botui.message.bot({
                 delay: 1500,
-                content: "因为drie有多重含意，Dr~有医生博士的意思，IE~浏览器大家都比较熟悉了或Internet Engineer(互联网工程师)，so~你懂得~"
+                content: "搭建本站是用于存放自己的学习笔记，包括整理的教程，方便日后查看，顺便也分享出来；"
+            })
+        }).then(function(res) {
+            return botui.message.bot({
+                delay: 1500,
+                content: "本站属个人博客，用于记录、分享本人的学习笔记。"
             })
         }).then(function() {
             return botui.action.button({
