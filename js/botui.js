@@ -109,7 +109,7 @@
             return botui.action.button({
                 delay: 1500,
                 action: [{
-                    text: "域名有什么含意吗？(ง •_•)ง",
+                    text: "域名有什么含意吗？🤔",
                     value: "next"
                 }]
             })
