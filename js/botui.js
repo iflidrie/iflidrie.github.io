@@ -70,7 +70,7 @@
         }).then(function() {
             return botui.message.bot({
                 delay: 1500,
-                content: "精通Html、CSS、JavaScript、PHP、Java、Python、C、C++、C#、Go、TypeScript等单词的拼写🎲"
+                content: "了解计算机基础知识🐱‍💻"
             })
         }).then(function() {
             return botui.message.bot({
