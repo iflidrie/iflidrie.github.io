@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>drie二维码生成</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.15.1/css/all.min.css">
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .card {
+        margin-top: 50px;
+      }
+      .card-header {
+        background-color: #007bff;
+        color: #fff;
+      }
+      .card-footer {
+        background-color: #f8f9fa;
+        text-align: right;
+      }
+      #qrcode {
+        margin: 20px auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <i class="fa fa-qrcode"></i> 根据输入框内容生成二维码
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="content-input"><p style="color:violet;">可以输入网址，文字等任何信息内容，汉字最多400左右，字数越多越难以识别，如需大量内容请使用二维码网址链接；特定格式可实现特定功能，请勿用于违规内容，否则后果自负！</p></label>
+                <label for="content-input"><p style="color:red;">本站二维码利用JavaScript本地生成，不会存储在服务器内，生成后请及时截图或拍照保存。</p></label>
+                <label for="content-input"><p style="color:orange;">请输入内容：</p></label>
+                <input type="text" class="form-control" id="content-input" placeholder="请输入要生成二维码的内容">
+              </div>
+              <div id="qrcode"></div>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary" id="generate-btn">生成二维码</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+      // 点击按钮生成二维码
+      $('#generate-btn').click(function() {
+        var content = $('#content-input').val();
+        if (content.trim() === '') {
+          alert('请输入要生成二维码的内容！');
+          return;
+        }
+        // 生成二维码
+        var qrcode = new QRCode("qrcode", {
+          text: content,
+          width: 256,
+          height: 256,
+          colorDark : "#000000",
+          colorLight : "#ffffff",
+          correctLevel : QRCode.CorrectLevel.H
+        });
+      });
+    </script>
+  </body>
+</html>
