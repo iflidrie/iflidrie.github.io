@@ -1,0 +1,726 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>趣学算法之算法之美 | Drie🦋</title><meta name="keywords" content="Java,MySQL,算法,代码,博客,Butterfly,Hexo,Drie🦋,Drie"><meta name="author" content="Drie🦋"><meta name="copyright" content="Drie🦋"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="第一章  算法之美 如果说数学是皇冠上的一颗明珠，那么算法就是这颗明珠上的光芒，算法让这颗明珠更加熠熠生辉，为科技进步和社会发展照亮了前进的路。数学是美学，算法是艺术。走进算法的人，才能体会它的魅力。 多年来，我有一个梦想，希望每一位提到算法的人，不再立即紧皱眉头，脑海闪现枯燥的公式、冗长的代码；希望每一位阅读和使用算法的人，体会到算法之美，像躺在法国普罗旺斯小镇的长椅上，呷一口红酒，闭上眼睛，体">
+<meta property="og:type" content="article">
+<meta property="og:title" content="趣学算法之算法之美">
+<meta property="og:url" content="https://drie.cn/posts/87ab2347.html">
+<meta property="og:site_name" content="Drie🦋">
+<meta property="og:description" content="第一章  算法之美 如果说数学是皇冠上的一颗明珠，那么算法就是这颗明珠上的光芒，算法让这颗明珠更加熠熠生辉，为科技进步和社会发展照亮了前进的路。数学是美学，算法是艺术。走进算法的人，才能体会它的魅力。 多年来，我有一个梦想，希望每一位提到算法的人，不再立即紧皱眉头，脑海闪现枯燥的公式、冗长的代码；希望每一位阅读和使用算法的人，体会到算法之美，像躺在法国普罗旺斯小镇的长椅上，呷一口红酒，闭上眼睛，体">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://source.drie.cn/qxsf-images/60.png">
+<meta property="article:published_time" content="2024-06-30T19:01:06.000Z">
+<meta property="article:modified_time" content="2024-06-30T21:19:19.498Z">
+<meta property="article:author" content="Drie🦋">
+<meta property="article:tag" content="Java,MySQL,算法,代码,博客,Butterfly,Hexo,Drie🦋,Drie">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://source.drie.cn/qxsf-images/60.png"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://drie.cn/posts/87ab2347"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://source.drie.cn/js/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://source.drie.cn/js/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '趣学算法之算法之美',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-01 05:19:19'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://source.drie.cn/js/index.css"><style id="themeColor"></style><style id="rightSide"></style><style id="transPercent"></style><style id="blurNum"></style><style id="settingStyle"></style><span id="fps"></span><style id="defineBg"></style><style id="menu_shadow"></style><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://source.drie.cn/js/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://source.drie.cn/js/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://source.drie.cn/js/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://source.drie.cn/js/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://source.drie.cn/js/carousel-touch.js"></script><link rel="stylesheet" href="https://source.drie.cn/js/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://source.drie.cn/js/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Drie🦋" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/img/avatar.webp" onerror="onerror=null;src='/assets/r1.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 恋爱小屋</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover" href="javascript:void(0);"><i class="fa-fw fas fa-list faa-tada"></i><span class="menu_word" style="font-size:17px"> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/ps/"><i class="fa-fw fas fa-diamond faa-tada"></i><span class="menu_word" style="font-size:17px"> 在线PS</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/qr/"><i class="fa-fw fas fa-qrcode faa-tada"></i><span class="menu_word" style="font-size:17px"> 二维码</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/vip/"><i class="fa-fw fas fa-television faa-tada"></i><span class="menu_word" style="font-size:17px"> 视频解析</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Drie🦋</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/social/fcircle/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pengyouquan">                   </use></svg><span class="menu_word" style="font-size:17px"> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 个人</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/personal/bb/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-qunliaotian">                   </use></svg><span class="menu_word" style="font-size:17px"> 唠叨</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/love/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-love-sign">                   </use></svg><span class="menu_word" style="font-size:17px"> 恋爱小屋</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/personal/about/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-paperplane">                   </use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover" href="javascript:void(0);"><i class="fa-fw fas fa-list faa-tada"></i><span class="menu_word" style="font-size:17px"> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/ps/"><i class="fa-fw fas fa-diamond faa-tada"></i><span class="menu_word" style="font-size:17px"> 在线PS</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/qr/"><i class="fa-fw fas fa-qrcode faa-tada"></i><span class="menu_word" style="font-size:17px"> 二维码</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/vip/"><i class="fa-fw fas fa-television faa-tada"></i><span class="menu_word" style="font-size:17px"> 视频解析</span></a></li></ul></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center><div id="nav-right"><div id="search-button"><a class="search faa-parent animated-hover" title="检索站内任何你想要的信息"><svg class="faa-tada icon" style="height:24px;width:24px;fill:currentColor;position:relative;top:6px" aria-hidden="true"><use xlink:href="#icon-valentine_-search-love-find-heart"></use></svg><span> 搜索</span></a></div><a class="meihua faa-parent animated-hover" onclick="toggleWinbox()" title="美化设置-自定义你的风格" id="meihua-button"><svg class="faa-tada icon" style="height:26px;width:26px;fill:currentColor;position:relative;top:8px" aria-hidden="true"><use xlink:href="#icon-tupian1"></use></svg></a><a class="sun_moon faa-parent animated-hover" onclick="switchNightMode()" title="浅色和深色模式转换" id="nightmode-button"><svg class="faa-tada" style="height:25px;width:25px;fill:currentColor;position:relative;top:7px" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon">       </use></svg></a><div id="toggle-menu"><a><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div id="post-info"><h1 class="post-title">趣学算法之算法之美</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><svg class="meta_icon post-meta-icon" style="width:30px;height:30px;position:relative;top:10px"><use xlink:href="#icon-rili"></use></svg><span class="post-meta-label">发表于 </span><time class="post-meta-date-created" datetime="2024-06-30T19:01:06.000Z" title="发表于 2024-07-01 03:01:06">2024-07-01</time><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-gengxin1"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-30T21:19:19.498Z" title="更新于 2024-07-01 05:19:19">2024-07-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-biaoqian"></use></svg><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:8px"><use xlink:href="#icon-charuword"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">1.1w</span><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:20px;height:20px;position:relative;top:5px"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>38分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="趣学算法之算法之美"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:5px"><use xlink:href="#icon-eye"></use></svg><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="第一章-算法之美">第一章  算法之美</h3>
+<p>如果说数学是皇冠上的一颗明珠，那么算法就是这颗明珠上的光芒，算法让这颗明珠更加熠熠生辉，为科技进步和社会发展照亮了前进的路。数学是美学，算法是艺术。走进算法的人，才能体会它的魅力。</p>
+<p>多年来，我有一个梦想，希望每一位提到算法的人，不再立即紧皱眉头，脑海闪现枯燥的公式、冗长的代码；希望每一位阅读和使用算法的人，体会到算法之美，像躺在法国普罗旺斯小镇的长椅上，呷一口红酒，闭上眼睛，体会舌尖上的美味，感受鼻腔中满溢的薰衣草的芳香……</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/1.png" alt="code"></p>
+<h3 id="1-1-打开算法之门">1.1　打开算法之门</h3>
+<p>瑞士著名的科学家N.Wirth教授曾提出： <strong>数据结构+算法=程序</strong> 。</p>
+<p>数据结构是程序的骨架，算法是程序的灵魂。</p>
+<p>在我们的生活中，算法无处不在。我们每天早上起来，刷牙、洗脸、吃早餐，都在算着时间，以免上班或上课迟到；去超市购物，在资金有限的情况下，考虑先买什么、后买什么，算算是否超额；在家中做饭，用什么食材、调料，做法、步骤，还要品尝一下咸淡，看看是否做熟。所以，不要说你不懂算法，其实你每天都在用！</p>
+<p>但是对计算机专业算法，很多人都有困惑：“I can understand, but I can’tuse！”，我能看懂，但不会用！就像参观莫高窟的壁画，看到它、感受它，却无法走进。我们正需要一把打开算法之门的钥匙，就如陶渊明《桃花源记》中的“初极狭，才通人。复行数十步，豁然开朗。”</p>
+<h3 id="1-2-妙不可言——算法复杂性">1.2　妙不可言——算法复杂性</h3>
+<p>我们首先看一道某跨国公司的招聘试题。</p>
+<p>写一个算法，求下面序列之和：</p>
+<p>−1，1，−1，1，…，(−1)<sup class="my_markdown">n</sup></p>
+<p>当你看到这个题目时，你会怎么想？for语句？while循环？</p>
+<p>先看算法1-1：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-1 </span></span><br><span class="line">sum=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">&#123;</span><br><span class="line">  sum=sum+(<span class="number">-1</span>)^n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码可以实现求和运算，但是为什么不这样算?！</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/2.jpg" alt="code"><br>
+再看算法1-2：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-2</span></span><br><span class="line"><span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>)  <span class="comment">//判断n是不是偶数，%表示求余数</span></span><br><span class="line">  sum =<span class="number">0</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  sum=<span class="number">-1</span>;</span><br></pre></td></tr></table></figure>
+<p>有的人看到这个代码后恍然大悟，原来可以这样啊？这不就是数学家高斯使用的算法吗？</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/3.jpg" alt="code"><br>
+一共50对数，每对之和均为101，那么总和为：</p>
+<p>（1+100）×50=5050</p>
+<p>1787年，10岁的高斯用了很短的时间算出了结果，而其他孩子却要算很长时间。</p>
+<p>可以看出，算法1-1需要运行n+1次，如果n=100 00，就要运行100 01次，而算法1-2仅仅需要运行1次！是不是有很大差别？</p>
+<blockquote>
+<p>高斯的方法我也知道，但遇到类似的题还是……我用的笨办法也是算法吗？</p>
+</blockquote>
+<p><strong>答：是算法。</strong></p>
+<p><strong>算法是指对特定问题求解步骤的一种描述。</strong></p>
+<p>算法只是对问题求解方法的一种描述，它不依赖于任何一种语言，既可以用自然语言、程序设计语言（C、C++、Java、Python等）描述，也可以用流程图、框图来表示。一般为了更清楚地说明算法的本质，我们去除了计算机语言的语法规则和细节，采用“伪代码”来描述算法。“伪代码”介于自然语言和程序设计语言之间，它更符合人们的表达方式，容易理解，但不是严格的程序设计语言，如果要上机调试，需要转换成标准的计算机程序设计语言才能运行。</p>
+<p>算法具有以下特性。</p>
+<p>（1） <strong>有穷性</strong> ：算法是由若干条指令组成的有穷序列，总是在执行若干次后结束，不可能永不停止。</p>
+<p>（2） <strong>确定性</strong> ：每条语句有确定的含义，无歧义。</p>
+<p>（3） <strong>可行性</strong> ：算法在当前环境条件下可以通过有限次运算实现。</p>
+<p>（4） <strong>输入输出</strong> ：有零个或多个输入，一个或多个输出。</p>
+<blockquote>
+<p>算法1-2的确算得挺快的，但如何知道我写的算法好不好呢？</p>
+</blockquote>
+<p><strong>“好”算法的标准如下。</strong></p>
+<p>（1）正确性：正确性是指算法能够满足具体问题的需求，程序运行正常，无语法错误，能够通过典型的软件测试，达到预期的需求。</p>
+<p>（2）易读性：算法遵循标识符命名规则，简洁易懂，注释语句恰当适量，方便自己和他人阅读，便于后期调试和修改。</p>
+<p>（3）健壮性：算法对非法数据及操作有较好的反应和处理。例如，在学生信息管理系统中登记学生年龄时，若将21岁误输入为210岁，系统应该提示出错。</p>
+<p>（4）高效性：高效性是指算法运行效率高，即算法运行所消耗的时间短。算法时间复杂度就是算法运行需要的时间。现代计算机一秒钟能计算数亿次，因此不能用秒来具体计算算法消耗的时间，由于相同配置的计算机进行一次基本运算的时间是一定的，我们可以用算法基本运算的执行次数来衡量算法的效率。因此，将算法基本运算的执行次数作为时间复杂度的衡量标准。</p>
+<p>（5）低存储性：低存储性是指算法所需要的存储空间低。对于像手机、平板电脑这样的嵌入式设备，算法如果占用空间过大，则无法运行。算法占用的空间大小称为 <strong>空间复杂度</strong> 。</p>
+<p>除了（1）～（3）中的基本标准外，我们对好的算法的评判标准就是 <strong>高效率</strong> 、 <strong>低存储</strong> 。</p>
+<blockquote>
+<p>（1）～（3）中的标准都好办，但时间复杂度怎么算呢？</p>
+</blockquote>
+<p><strong>时间复杂度</strong> ：算法运行需要的时间，一般将 <strong>算法的执行次数</strong> 作为时间复杂度的度量标准。</p>
+<p>看算法1-3，并分析算法的时间复杂度。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-3 </span></span><br><span class="line">sum=<span class="number">0</span>;                     <span class="comment">//运行1次</span></span><br><span class="line">total=<span class="number">0</span>;                   <span class="comment">//运行1次</span></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>; i&lt;=n; i++)        <span class="comment">//运行n次</span></span><br><span class="line">&#123;</span><br><span class="line">  sum=sum+i;               <span class="comment">//运行n次</span></span><br><span class="line">  <span class="keyword">for</span>(j=<span class="number">1</span>; j&lt;=n; j++)      <span class="comment">//运行n*n次</span></span><br><span class="line">    total=total+i*j;       <span class="comment">//运行n*n次</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>把算法的所有语句的运行次数加起来：1+1+n+n+n×n+n×n，可以用一个函数T(n)表达：</p>
+<p>T(n)=2n<sup class="my_markdown">2</sup>+2n+2</p>
+<p>当n足够大时，例如n=10<sup class="my_markdown">5</sup>时，T(n)=2×10<sup>10</sup>+2×10<sup class="my_markdown">5</sup>+2，我们可以看到算法运行时间主要取决于第一项，后面的甚至可以忽略不计。</p>
+<p>用极限表示为：</p>
+<p>，C为不等于0的常数</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/4.gif" alt="code"><br>
+如果用 <strong>时间复杂度的渐近上界</strong> 表示，如图1-1所示。</p>
+<p>从图1-1中可以看出，当n≥n<sub class="my_markdown">0</sub>时，T(n)≤Cf (n)，当n足够大时，T(n)和f (n)近似相等。因此，我们用О(f (n))来表示时间复杂度渐近上界，通常用这种表示法衡量算法时间复杂度。算法1-3的时间复杂度渐近上界为О(f (n))＝О(n<sup class="my_markdown">2</sup>)，用极限表示为：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/7.gif" alt="code"><br>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/8.png" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-1　渐近时间复杂度上界</b></center>
+<p>还有 <strong>渐近下界</strong> 符号Ω(T(n)≥Cf (n))，如图1-2所示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/9.png" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-2　渐近时间复杂度下界</b></center>
+<p>从图1-2可以看出，当n≥n<sub class="my_markdown">0</sub>时，T(n)≥Cf (n)，当n足够大时，T(n)和f (n)近似相等，因此，我们用Ω(f (n))来表示时间复杂度渐近下界。</p>
+<p><strong>渐近精确界</strong> 符号Θ(C<sub class="my_markdown">1</sub>f (n)≤T(n)≤C<sub>2</sub>f (n))，如图1-3所示。</p>
+<p>从图1-3中可以看出，当n≥n<sub class="my_markdown">0</sub>时，C<sub>1</sub>f (n)≤T(n)≤C<sub>2</sub>f (n)，当n足够大时，T(n)和f (n)近似相等。这种两边逼近的方式，更加精确近似，因此，用Θ (f (n))来表示时间复杂度渐近精确界。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/10.png" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-3　渐进时间复杂度精确界</b></center>
+<p>我们通常使用时间复杂度渐近上界О(f (n))来表示时间复杂度。</p>
+<p>看算法1-4，并分析算法的时间复杂度。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-4</span></span><br><span class="line">i=<span class="number">1</span>;              <span class="comment">//运行1次</span></span><br><span class="line"><span class="keyword">while</span>(i&lt;=n)     <span class="comment">//可假设运行x次</span></span><br><span class="line">&#123;</span><br><span class="line">  i=i*<span class="number">2</span>;         <span class="comment">//可假设运行x次</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>观察算法1-4，无法立即确定while 及i=i*2运行了多少次。这时可假设运行了x次，每次运算后i值为2，2<sup class="my_markdown">2</sup>，2<sup>3</sup>，…，2<sup>x</sup>，当i=n时结束，即2<sup>x</sup>＝n时结束，则x=log<sub class="my_markdown">2</sub>n，那么算法1-4的运算次数为1+2log<sub class="my_markdown">2</sub>n，时间复杂度渐近上界为О(f (n))＝О(log<sub class="my_markdown">2</sub>n)。</p>
+<p>在算法分析中，渐近复杂度是对算法运行次数的粗略估计，大致反映问题规模增长趋势，而不必精确计算算法的运行时间。在计算渐近时间复杂度时，可以只考虑对算法运行时间贡献大的语句，而忽略那些运算次数少的语句，循环语句中处在循环内层的语句往往运行次数最多，即为对运行时间贡献最大的语句。例如在算法1-3中，total=total+i*j是对算法贡献最大的语句，只计算该语句的运行次数即可。</p>
+<p><strong>注意：</strong> 不是每个算法都能直接计算运行次数。</p>
+<p>例如算法1-5，在a[n]数组中顺序查找x，返回其下标i，如果没找到，则返回−1。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-5 </span></span><br><span class="line">findx(<span class="type">int</span> x)      <span class="comment">//在a[n]数组中顺序查找x</span></span><br><span class="line">&#123; </span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;n; i++)  </span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">if</span> (a[i]==x)  </span><br><span class="line">     <span class="keyword">return</span> i;    <span class="comment">//返回其下标i</span></span><br><span class="line">   ｝</span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们很难计算算法1-5中的程序到底执行了多少次，因为运行次数依赖于x在数组中的位置，如果第一个元素就是x，则执行1次（最好情况）；如果最后一个元素是x，则执行n次（最坏情况）；如果分布概率均等，则平均执行次数为（n+1）/2。</p>
+<p>有些算法，如排序、查找、插入等算法，可以分为 <strong>最好</strong> 、 <strong>最坏</strong> 和 <strong>平均</strong> 情况分别求算法渐近复杂度，但我们考查一个算法通常考查最坏的情况，而不是考查最好的情况， <strong>最坏情况对衡量算法的好坏具有实际的意义</strong> 。</p>
+<blockquote>
+<p>我明白了，那空间复杂度应该就是算法占了多大存储空间了？</p>
+</blockquote>
+<p><strong>空间复杂度</strong> ：算法占用的空间大小。一般将算法的 <strong>辅助空间</strong> 作为衡量空间复杂度的标准。</p>
+<p>空间复杂度的本意是指算法在运行过程中占用了多少存储空间。算法占用的存储空间包括：</p>
+<p>（1）输入/输出数据；</p>
+<p>（2）算法本身；</p>
+<p>（3）额外需要的辅助空间。</p>
+<p>输入/输出数据占用的空间是必需的，算法本身占用的空间可以通过精简算法来缩减，但这个压缩的量是很小的，可以忽略不计。而在运行时使用的辅助变量所占用的空间，即辅助空间是衡量空间复杂度的关键因素。</p>
+<p>看算法1-6，将两个数交换，并分析其空间复杂度。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-6 </span></span><br><span class="line">swap(<span class="type">int</span> x,<span class="type">int</span> y)  <span class="comment">//x与y交换 </span></span><br><span class="line">&#123; </span><br><span class="line">  <span class="type">int</span> temp;</span><br><span class="line">  temp=x;  <span class="comment">//temp为辅助空间 ①</span></span><br><span class="line">  x=y;   ②</span><br><span class="line">  y=temp; ③</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>两数的交换过程如图1-4所示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/11.jpg" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-4　两数交换过程</b></center>
+<p>图1-4中的步骤标号与算法1-6中的语句标号一一对应，该算法使用了一个辅助空间temp，空间复杂度为О(1)。</p>
+<p><strong>注意：</strong> 递归算法中，每一次递推需要一个栈空间来保存调用记录，因此，空间复杂度需要计算递归栈的辅助空间。</p>
+<p>看算法1-7，计算n的阶乘，并分析其空间复杂度。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-7 </span></span><br><span class="line">fac(<span class="type">int</span> n)  <span class="comment">//计算n的阶乘</span></span><br><span class="line">&#123;  </span><br><span class="line">  <span class="keyword">if</span>(n&lt;<span class="number">0</span>)   <span class="comment">//小于零的数无阶乘值</span></span><br><span class="line">  &#123;  </span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">&quot;n&lt;0,data error!&quot;</span>); </span><br><span class="line">     <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(n= =<span class="number">0</span> || n= =<span class="number">1</span>) </span><br><span class="line">           <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">         <span class="keyword">else</span> </span><br><span class="line">           <span class="keyword">return</span> n*fac(n<span class="number">-1</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>阶乘是典型的递归调用问题，递归包括递推和回归。递推是将原问题不断分解成子问题，直到达到结束条件，返回最近子问题的解；然后逆向逐一回归，最终到达递推开始的原问题，返回原问题的解。</p>
+<p><strong>思考：</strong> 试求5的阶乘，程序将怎样计算呢？</p>
+<p>5的阶乘的递推和回归过程如图1-5和图1-6所示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/12.jpg" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-5　5的阶乘递推过程</b></center>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/13.png" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-6　5的阶乘回归过程</b></center>
+<p>图1-5和图1-6的递推、回归过程是我们从逻辑思维上推理，用图的方式形象地表达出来的，但计算机内部是怎样处理的呢？计算机使用一种称为“栈”的数据结构，它类似于一个放一摞盘子的容器，每次从顶端放进去一个，拿出来的时候只能从顶端拿一个，不允许从中间插入或抽取，因此称为“后进先出”（last in first out）。</p>
+<p>5的阶乘进栈过程如图1-7所示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/14.png" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-7　5的阶乘进栈过程</b></center>
+<p>5的阶乘出栈过程如图1-8所示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/15.png" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-8　5的阶乘出栈过程</b></center>
+<p>从图1-7和图1-8的进栈、出栈过程中，我们可以很清晰地看到，首先把子问题一步步地压进栈，直到得到返回值，再一步步地出栈，最终得到递归结果。在运算过程中，使用了n个栈空间作为辅助空间，因此阶乘递归算法的空间复杂度为О(n)。在算法1-7中，时间复杂度也为О(n)，因为n的阶乘仅比n−1的阶乘多了一次乘法运算，fac(n)=n*fac(n−1)。如果用T(n)表示fac(n)的时间复杂度，可表示为：</p>
+<p>T(n)= T(n−1)+1</p>
+<p>= T(n−2)+1+1</p>
+<p>……</p>
+<p>= T(1)+…+1+1</p>
+<p>=n</p>
+<h3 id="1-3-美不胜收——魔鬼序列">1.3　美不胜收——魔鬼序列</h3>
+<h4 id="趣味故事1-1：一棋盘的麦子">趣味故事1-1：一棋盘的麦子</h4>
+<p>有一个古老的传说，有一位国王的女儿不幸落水，水中有很多鳄鱼，国王情急之下下令：“谁能把公主救上来，就把女儿嫁给他。”很多人纷纷退让，一个勇敢的小伙子挺身而出，冒着生命危险把公主救了上来，国王一看是个穷小子，想要反悔，说：“除了女儿，你要什么都可以。”小伙子说：“好吧，我只要一棋盘的麦子。您在第1个格子里放1粒麦子，在第2个格子里放2粒，在第3个格子里放4粒，在第4个格子里放8粒，以此类推，每一格子里的麦子粒数都是前一格的两倍。把这64个格子都放好了就行，我就要这么多。”国王听后哈哈大笑，觉得小伙子的要求很容易满足，满口答应。结果发现，把全国的麦子都拿来，也填不完这64格……国王无奈，只好把女儿嫁给了这个小伙子。</p>
+<p><strong>解析</strong></p>
+<p>棋盘上的64个格子究竟要放多少粒麦子？</p>
+<p>把每一个放的麦子数加起来，总和为S，则：</p>
+<p>S=1+2<sup class="my_markdown">1</sup>+2<sup>2</sup>+2<sup>3</sup>+…+2<sup>63</sup>　　 ①</p>
+<p>我们把式①等号两边都乘以2，等式仍然成立：</p>
+<p>2S=2<sup class="my_markdown">1</sup>+2<sup>2</sup>+2<sup>3</sup>+…+2<sup>63</sup>+2<sup>64</sup>　　 ②</p>
+<p>式 ②减去式①，则：</p>
+<p>S=2<sup class="my_markdown">64</sup>−1 ＝18 446 744 073 709 551 615</p>
+<p>据专家统计，每个麦粒的平均重量约41.9毫克，那么这些麦粒的总重量是：</p>
+<p>18 446 744 073 709 551 615×41.9＝772 918 576 688 430 212 668.5（毫克）</p>
+<p>≈7729（亿吨）</p>
+<p>全世界人口按60亿计算，每人可以分得128吨！</p>
+<p>我们称这样的函数为 <strong>爆炸增量函数</strong> ，想一想，如果算法时间复杂度是О(2<sup class="my_markdown">n</sup>) 会怎样？随着n的增长，这个算法会不会“爆掉”？经常见到有些算法调试没问题，运行一段也没问题，但关键的时候宕机（shutdown）。例如，在线考试系统，50个人考试没问题，100人考试也没问题，如果全校1万人考试就可能出现宕机。</p>
+<p><strong>注意：</strong> 宕机就是死机，指电脑不能正常工作了，包括一切原因导致的死机。计算机主机出现意外故障而死机，一些服务器（如数据库）死锁，服务器的某些服务停止运行都可以称为宕机。</p>
+<p>常见的算法时间复杂度有以下几类。</p>
+<p>（1）常数阶。</p>
+<p>常数阶算法运行的次数是一个常数，如5、20、100。常数阶算法时间复杂度通常用О(1)表示，例如算法1-6，它的运行次数为4，就是常数阶，用О(1)表示。</p>
+<p>（2）多项式阶。</p>
+<p>很多算法时间复杂度是多项式，通常用О(n)、О(n<sup class="my_markdown">2</sup>)、О(n<sup>3</sup>)等表示。例如算法1-3就是多项式阶。</p>
+<p>（3）指数阶。</p>
+<p>指数阶时间复杂度运行效率极差，程序员往往像躲“恶魔”一样避开它。常见的有О(2<sup class="my_markdown">n</sup>)、О(n！)、О(n<sup class="my_markdown">n</sup>)等。使用这样的算法要慎重，例如趣味故事1-1。</p>
+<p>（4）对数阶。</p>
+<p>对数阶时间复杂度运行效率较高，常见的有О(logn)、О(nlogn)等，例如算法1-4。</p>
+<p>常见时间复杂度函数曲线如图1-9所示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/16.jpg" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-9　常见函数增量曲线</b></center>
+<p>从图1-9中可以看出，指数阶增量随着x的增加而急剧增加，而对数阶增加缓慢。它们之间的关系为：</p>
+<p>О(1)&lt; О(logn)&lt; О(n)&lt; О(nlogn) &lt; О(n<sup class="my_markdown">2</sup>)&lt; О(n<sup class="my_markdown">3</sup>)&lt; О(2<sup class="my_markdown">n</sup>) &lt; О(n!)&lt; О(n<sup class="my_markdown">n</sup>)</p>
+<p>我们在设计算法时要注意算法复杂度增量的问题，尽量避免爆炸级增量。</p>
+<h4 id="趣味故事1-2：神奇兔子数列">趣味故事1-2：神奇兔子数列</h4>
+<p>假设第1个月有1对刚诞生的兔子，第2个月进入成熟期，第3个月开始生育兔子，而1对成熟的兔子每月会生1对兔子，兔子永不死去……那么，由1对初生兔子开始，12个月后会有多少对兔子呢？</p>
+<p>兔子数列即斐波那契数列，它的发明者是意大利数学家列昂纳多•斐波那契（Leonardo Fibonacci，1170—1250）。1202年，他撰写了《算盘全书》（《Liber Abaci》）一书，该书是一部较全面的初等数学著作。书中系统地介绍了印度—阿拉伯数码及其演算法则，介绍了中国的“盈不足术”；引入了负数，并研究了一些简单的一次同余式组。</p>
+<p>（1）问题分析</p>
+<p>我们不妨拿新出生的1对小兔子分析：</p>
+<p>第1个月，小兔子①没有繁殖能力，所以还是1对。</p>
+<p>第2个月，小兔子①进入成熟期，仍然是1对。</p>
+<p>第3个月，兔子①生了1对小兔子②，于是这个月共有2（1+1=2）对兔子。</p>
+<p>第4个月，兔子①又生了1对小兔子③。因此共有3（1+2=3）对兔子。</p>
+<p>第5个月，兔子①又生了1对小兔子④，而在第3个月出生的兔子②也生下了1对小兔子⑤。共有5（2+3=5）对兔子。</p>
+<p>第6个月，兔子①②③各生下了1对小兔子。新生3对兔子加上原有的5对兔子这个月共有8（3+5=8）对兔子。</p>
+<p>……</p>
+<p>为了表达得更清楚，我们用图示来分别表示新生兔子、成熟期兔子和生育期兔子，兔子的繁殖过程如图1-10所示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/17.png" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-10　兔子繁殖过程</b></center>
+<p>这个数列有十分明显的特点，从第3个月开始， <strong>当月的兔子数</strong> = <strong>上月兔子数</strong> + <strong>当月新生兔子数</strong> ，而当月新生的兔子正好是 <strong>上上月的兔子数</strong> 。因此，前面相邻两项之和，构成了后一项，即：</p>
+<p><strong>当月的兔子数</strong> = <strong>上月兔子数</strong> + <strong>上上月的兔子数</strong></p>
+<p>斐波那契数列如下：</p>
+<p>1，1，2，3，5，8，13，21，34，…</p>
+<p>递归式表达式：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/18.gif" alt="code"><br>
+那么我们该怎么设计算法呢？</p>
+<blockquote>
+<p>哈哈，这太简单了，用递归算法很快就算出来了！</p>
+</blockquote>
+<p>（2）算法设计</p>
+<p>首先按照递归表达式设计一个递归算法，见算法1-8。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-8 </span></span><br><span class="line">Fib1(<span class="type">int</span> n) </span><br><span class="line">&#123;  </span><br><span class="line">  <span class="keyword">if</span>(n&lt;<span class="number">1</span>)   </span><br><span class="line">     <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">if</span>(n==<span class="number">1</span>||n==<span class="number">2</span>)   </span><br><span class="line">     <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> Fib1(n<span class="number">-1</span>)+Fib1(n<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>写得不错，那么算法设计完成后，我们有3个问题：</p>
+<ul>
+<li>算法是否正确？</li>
+<li>算法复杂度如何？</li>
+<li>能否改进算法？</li>
+</ul>
+<p>（3）算法验证分析</p>
+<p>第一个问题毋庸置疑，因为算法1-8是完全按照递推公式写出来的，所以正确性没有问题。那么算法复杂度呢？假设T(n)表示计算Fib1(n)所需要的基本操作次数，那么：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n=<span class="number">1</span>时，T(n)=<span class="number">1</span>；</span><br><span class="line">n=<span class="number">2</span>时，T(n)=<span class="number">1</span>；</span><br><span class="line">n=<span class="number">3</span>时，T(n)=<span class="number">3</span>；<span class="comment">//调用Fib1(2)、Fib1(1)和执行一次加法运算Fib1(2)+Fib1(1)</span></span><br></pre></td></tr></table></figure>
+<p>因此，n&gt;2时要分别调用Fib1(n−1)、Fib1(n−2)和执行一次加法运算，即：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n&gt;<span class="number">2</span>时，T(n)= T(n<span class="number">-1</span>)+ T(n<span class="number">-2</span>)+<span class="number">1</span>；</span><br></pre></td></tr></table></figure>
+<p>递归表达式和时间复杂度T(n)之间的关系如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/19.gif" alt="code"><br>
+由此可得：。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/20.gif" alt="code"><br>
+那么怎么计算F(n)呢？</p>
+<p>有兴趣的读者可以看本书附录A中通项公式的求解方法，也可以看下文中的简略解释。</p>
+<p>斐波那契数列通项为：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/21.gif" alt="code"><br>
+当n趋近于无穷时，</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/22.gif" alt="code"><br>
+由于<img class="my_markdown" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/20.gif" style="width:100px;  height: 18px; "/>，这是一个指数阶的算法！</p>
+<p>如果我们今年计算出了F(100)，那么明年才能算出F(101)，多算一个斐波那契数需要一年的时间， <strong>爆炸增量函数</strong> 是算法设计的噩梦！算法1-8的时间复杂度属于 <strong>爆炸增量函数</strong> ，这在算法设计时是应当避开的，那么我们能不能改进它呢？</p>
+<p>（4）算法改进</p>
+<p>既然斐波那契数列中的每一项是前两项之和，如果记录前两项的值，只需要一次加法运算就可以得到当前项，时间复杂度会不会更低一些？我们用数组试试看，见算法1-9。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-9 </span></span><br><span class="line">Fib2(<span class="type">int</span> n) </span><br><span class="line">&#123;  </span><br><span class="line">  <span class="keyword">if</span>(n&lt;<span class="number">1</span>)   </span><br><span class="line">     <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  <span class="type">int</span> *a=new <span class="type">int</span>[n];<span class="comment">//定义一个数组</span></span><br><span class="line">  a[<span class="number">1</span>]=<span class="number">1</span>；</span><br><span class="line">  a[<span class="number">2</span>]=<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">3</span>;i&lt;=n;i++)</span><br><span class="line">     a[i]=a[i<span class="number">-1</span>]+a[i<span class="number">-2</span>];</span><br><span class="line">  <span class="keyword">return</span> a[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>很明显，算法1-9的时间复杂度为О(n)。算法仍然是按照F(n)的定义，所以正确性没有问题，而 <strong>时间复杂度</strong> 却从算法1-8的 <strong>指数阶降到了多项式阶</strong> ，这是算法效率的一个巨大突破！</p>
+<p>算法1-9使用了一个辅助数组记录中间结果，空间复杂度也为О(n)，其实我们只需要得到第n个斐波那契数，中间结果只是为了下一次使用，根本不需要记录。因此，我们可以采用 <strong>迭代法</strong> 进行算法设计，见算法1-10。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-10 </span></span><br><span class="line">Fib3(<span class="type">int</span> n) </span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> i,s1,s2; </span><br><span class="line">  <span class="keyword">if</span>(n&lt;<span class="number">1</span>)   </span><br><span class="line">     <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">if</span>(n==<span class="number">1</span>||n==<span class="number">2</span>)   </span><br><span class="line">     <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  s1=<span class="number">1</span>;</span><br><span class="line">  s2=<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">3</span>; i&lt;=n; i++)</span><br><span class="line">  &#123;</span><br><span class="line">     s2=s1+s2; <span class="comment">//辗转相加法</span></span><br><span class="line">     s1=s2-s1; <span class="comment">//记录前一项</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> s2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>迭代过程如下。</p>
+<p>初始值：s<sub class="my_markdown">1</sub>=1；s<sub>2</sub>=1；</p>
+<p>当前解　　　 记录前一项</p>
+<p>i=3时　　 s<sub class="my_markdown">2</sub>= s<sub>1</sub>+s<sub class="my_markdown">2</sub>=2　　 s<sub>1</sub>=s<sub class="my_markdown">2</sub>−s<sub>1</sub>=1</p>
+<p>i=4时　　 s<sub class="my_markdown">2</sub>= s<sub>1</sub>+s<sub class="my_markdown">2</sub>=3　　 s<sub>1</sub>= s<sub class="my_markdown">2</sub>−s<sub>1</sub>=2</p>
+<p>i=5时　　 s<sub class="my_markdown">2</sub>= s<sub>1</sub>+s<sub class="my_markdown">2</sub>=5　　 s<sub>1</sub>= s<sub class="my_markdown">2</sub>−s<sub>1</sub>=3</p>
+<p>i=6时　　 s<sub class="my_markdown">2</sub>= s<sub>1</sub>+s<sub class="my_markdown">2</sub>=8　　 s<sub>1</sub>= s<sub class="my_markdown">2</sub>−s<sub>1</sub>=5</p>
+<p>……　　　　　 ……　　　　　 ……</p>
+<p>算法1-10使用了若干个辅助变量，迭代辗转相加，每次记录前一项，时间复杂度为О(n)，但 <strong>空间复杂度</strong> 降到了О(1)。</p>
+<p><strong>问题的进一步讨论</strong> ：我们能不能继续降阶，使算法时间复杂度更低呢？实质上，斐波那契数列时间复杂度还可以降到对数阶О(logn)，有兴趣的读者可以查阅相关资料。想想看，我们把一个算法从 <strong>指数阶</strong> 降到 <strong>多项式阶</strong> ，再降到 <strong>对数阶</strong> ，这是一件多么振奋人心的事！</p>
+<p>（5）惊人大发现</p>
+<p>科学家经研究在植物的叶、枝、茎等排列中发现了斐波那契数！例如，在树木的枝干上选一片叶子，记其为数1，然后依序点数叶子（假定没有折损），直到到达与那片叶子正对的位置，则其间的叶子数多半是斐波那契数。叶子从一个位置到达下一个正对的位置称为一个循回。叶子在一个循回中旋转的圈数也是斐波那契数。在一个循回中，叶子数与叶子旋转圈数的比称为叶序（源自希腊词，意即叶子的排列）比。多数植物的叶序比呈现为斐波那契数的比，例如，蓟的头部具有13条顺时针旋转和21条逆时针旋转的斐波那契螺旋，向日葵的种子的圈数与子数、菠萝的外部排列同样有着这样的特性，如图1-11所示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/23.jpg" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-11　斐波那契螺旋（图片来自网络）</b></center>
+<p>观察延龄草、野玫瑰、南美血根草、大波斯菊、金凤花、耧斗菜、百合花、蝴蝶花的花瓣，可以发现它们的花瓣数目为斐波那契数：3，5，8，13，21，…。如图1-12所示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/24.jpg" alt="code"></p>
+<center class="my_markdown"><b class="my_markdown">图1-12　植物花瓣（图片来自网络）</b></center>
+<p>树木在生长过程中往往需要一段“休息”时间，供自身生长，而后才能萌发新枝。所以，一株树苗在一段间隔（例如一年）以后长出一条新枝；第二年新枝“休息”，老枝依旧萌发；此后，老枝与“休息”过一年的枝同时萌发，当年生的新枝则次年“休息”。这样，一株树木各个年份的枝桠数便构成斐波那契数列，这个规律就是生物学上著名的“鲁德维格定律”。</p>
+<p>这些植物懂得斐波那契数列吗？应该并非如此，它们只是按照自然的规律才进化成这样的。这似乎是植物排列种子的“优化方式”，它能使所有种子具有相近的大小却又疏密得当，不至于在圆心处挤太多的种子而在圆周处却又很稀疏。叶子的生长方式也是如此，对于许多植物来说，每片叶子从中轴附近生长出来，为了在生长的过程中一直都能最佳地利用空间（要考虑到叶子是一片一片逐渐地生长出来，而不是一下子同时出现的），每片叶子和前一片叶子之间的角度应该是222.5°，这个角度称为“黄金角度”，因为它和整个圆周360°之比是黄金分割数0.618的倒数，而这种生长方式就导致了斐波那契螺旋的产生。向日葵的种子排列形成的斐波那契螺旋有时能达到89，甚至144。1992年，两位法国科学家通过对花瓣形成过程的计算机仿真实验，证实了在系统保持最低能量的状态下，花朵会以斐波那契数列的规律长出花瓣。</p>
+<p>有趣的是：这样一个完全是自然数的数列，通项公式却是用无理数来表达的。而且当n趋向于无穷大时，斐波那契数列前一项与后一项的比值越来越逼近黄金分割比0.618：1÷1 = 1，1÷2 = 0.5，2÷3 = 0.666，…，3÷5 = 0.6，5÷8 = 0.625，…，55÷89 = 0.617977，…，144÷233 = 0.618025，…，46368÷75025 = 0.6180339886……</p>
+<p>越到后面，这些比值越接近黄金分割比：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/25.gif" alt="code"><br>
+斐波那契数列起源于兔子数列，这个现实中的例子让我们真切地感到数学源于生活，生活中我们需要不断地通过现象发现数学问题，而不是为了学习而学习。学习的目的是满足对世界的好奇心，如果我们怀着这样一颗好奇心，或许世界会因你而不同！斐波那契通过兔子繁殖来告诉我们这种数学问题的本质，随着数列项的增加，前一项与后一项之比越来越逼近黄金分割的数值0.618时，我彻底被震惊到了，因为数学可以表达美，这是令我们叹为观止的地方。当数学创造了更多的奇迹时，我们会发现数学本质上是可以回归到自然的，这样的事例让我们感受到数学的美，就像黄金分割、斐波那契数列，如同大自然中的一朵朵小花，散发着智慧的芳香……</p>
+<h3 id="1-4-灵魂之交——马克思手稿中的数学题">1.4　灵魂之交——马克思手稿中的数学题</h3>
+<p>有人抱怨：算法太枯燥、乏味了，看到公式就头晕，无法学下去了。你肯定选择了一条充满荆棘的路。选对方法，你会发现这里是一条充满鸟语花香和欢声笑语的幽径，在这里，你可以和高德纳聊聊，同爱因斯坦喝杯咖啡，与歌德巴赫和角谷谈谈想法，Dijkstra也不错。与世界顶级的大师进行灵魂之交，不问结果，这一过程已足够美妙！</p>
+<p>如果这本书能让多一个人爱上算法，这就足够了！</p>
+<h4 id="趣味故事1-3：马克思手稿中的数学题">趣味故事1-3：马克思手稿中的数学题</h4>
+<p>马克思手稿中有一道趣味数学问题：有30个人，其中有男人、女人和小孩，这些人在一家饭馆吃饭花了50先令；每个男人花3先令，每个女人花2先令，每个小孩花1先令；问男人、女人和小孩各有几人？</p>
+<p>（1）问题分析</p>
+<p>设x、y、z分别代表男人、女人和小孩。按题目的要求，可得到下面的方程：</p>
+<p>x+y+z=30　①</p>
+<p>3x+2y+z=50 ②</p>
+<p>两式相减，②−①得：</p>
+<p>2x+y=20　③</p>
+<p>从式③可以看出，因为x、y为正整数，x最大只能取9，所以x变化范围是1～9。那么我们可以让x从1到9变化，再找满足①②两个条件y、z值，找到后输入即可，答案可能不止一个。</p>
+<p>（2）算法设计</p>
+<p>按照上面的分析进行算法设计，见算法1-11。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-11</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123; </span><br><span class="line">  <span class="type">int</span> x,y,z,count=<span class="number">0</span>; <span class="comment">//记录可行解的个数</span></span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot; Men，Women，Children&quot;</span>&lt;&lt;<span class="built_in">endl</span>; </span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;........................................&quot;</span>&lt;&lt;<span class="built_in">endl</span>; </span><br><span class="line">  <span class="keyword">for</span>(x=<span class="number">1</span>;x&lt;=<span class="number">9</span>;x++) </span><br><span class="line">  &#123; </span><br><span class="line">    y=<span class="number">20</span><span class="number">-2</span>*x;  <span class="comment">//固定x值然后根据式③求得y值 </span></span><br><span class="line">    z=<span class="number">30</span>-x-y;  <span class="comment">//由式①求得z值 </span></span><br><span class="line">    <span class="keyword">if</span>(<span class="number">3</span>*x+<span class="number">2</span>*y+z==<span class="number">50</span>)  <span class="comment">//判断当前得到的一组解是否满足式②</span></span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;++count&lt;&lt;<span class="string">&quot;  &quot;</span>&lt;&lt;x&lt;&lt;y&lt;&lt;z&lt;&lt;<span class="built_in">endl</span>; <span class="comment">//打印出第几个解和解值x，y，z</span></span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>（3）算法分析</p>
+<p>算法完全按照题中方程设计，因此正确性毋庸置疑。那么算法复杂度怎样呢？从算法1-11中可以看出，对算法时间复杂度贡献最大的语句是for(x=1;x&lt;=9;x++)，该语句的执行次数是9，for循环中3条语句的执行次数也为9，其他语句执行次数为1，for语句一共执行36次基本运算，时间复杂度为О(1)。没有使用辅助空间，空间复杂度也为О(1)。</p>
+<p>（4）问题的进一步讨论</p>
+<p>为什么让x变化来确定y、z值？让y变化来确定x、z值会怎样呢？让z变化来确定x、y值行不行？有没有更好的算法降低时间复杂度？</p>
+<h4 id="趣味故事1-4：爱因斯坦的阶梯">趣味故事1-4：爱因斯坦的阶梯</h4>
+<p>爱因斯坦家里有一条长阶梯，若每步跨2阶，则最后剩1阶；若每步跨3阶，则最后剩2阶；若每步跨5阶，则最后剩4阶；若每步跨6阶，则最后剩5阶。只有每次跨7阶，最后才正好1阶不剩。请问这条阶梯共有多少阶？</p>
+<p>（1）问题分析</p>
+<p>根据题意，阶梯数n满足下面一组同余式：</p>
+<p>n≡1(mod2)</p>
+<p>n≡2(mod3)</p>
+<p>n≡4(mod5)</p>
+<p>n≡5(mod6)</p>
+<p>n≡0(mod7)</p>
+<p><strong>注意：</strong> 两个整数a、b，若它们除以整数m所得的余数相等，则称a、b对于模m同余，记作a≡b(mod m)，读作a同余于b模m，或读作a与b关于模m同余。那么只需要判断一个整数值是否满足这5个同余式即可。</p>
+<p>（2）算法设计</p>
+<p>按照上面的分析进行算法设计，见算法1-12。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-12</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123; </span><br><span class="line">  <span class="type">int</span> n=<span class="number">1</span>; <span class="comment">//n为所设的阶梯数 </span></span><br><span class="line">  <span class="keyword">while</span>(!((n%<span class="number">2</span>==<span class="number">1</span>)&amp;&amp;(n%<span class="number">3</span>==<span class="number">2</span>)&amp;&amp;(n%<span class="number">5</span>==<span class="number">4</span>)&amp;&amp;(n%<span class="number">6</span>==<span class="number">5</span>)&amp;&amp;(n%<span class="number">7</span>==<span class="number">0</span>))) </span><br><span class="line">      n++;      <span class="comment">//判别是否满足一组同余式</span></span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;Count the stairs= &quot;</span>&lt;&lt;n&lt;&lt;<span class="built_in">endl</span>;  <span class="comment">//输出阶梯数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（3）算法分析</p>
+<p>算法的运行结果：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Count the stairs =<span class="number">119</span></span><br></pre></td></tr></table></figure>
+<p>因为n从1开始，找到第一个满足条件的数就停止，所以算法1-12中的while语句运行了119次。有的算法从算法本身无法看出算法的运行次数，例如算法1-12，我们很难知道while语句执行了多少次，因为它是满足条件时停止，那么多少次才能满足条件呢？每个问题具体的次数是不同的，所以不能看到程序中有n，就简单地说它的时间复杂度为n。</p>
+<blockquote>
+<p>我们从1开始一个一个找结果的办法是不是太麻烦了？</p>
+</blockquote>
+<p>（4）算法改进</p>
+<p>因为从上面的5个同余式来看，这个数一定是7的倍数n≡0(mod 7)，除以6余5，除以5余4，除以3余2，除以2余1，我们为什么不从7的倍数开始判断呢？算法改进见算法1-13。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-13</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123; </span><br><span class="line">  <span class="type">int</span> n=<span class="number">7</span>; <span class="comment">//n为所设的阶梯数 </span></span><br><span class="line">  <span class="keyword">while</span>(!((n%<span class="number">2</span>==<span class="number">1</span>)&amp;&amp;(n%<span class="number">3</span>==<span class="number">2</span>)&amp;&amp;(n%<span class="number">5</span>==<span class="number">4</span>)&amp;&amp;(n%<span class="number">6</span>==<span class="number">5</span>)&amp;&amp;(n%<span class="number">7</span>==<span class="number">0</span>))) </span><br><span class="line">  n=n+<span class="number">7</span>;      <span class="comment">//判别是否满足一组同余式</span></span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;Count the stairs=&quot;</span>&lt;&lt;n&lt;&lt;<span class="built_in">endl</span>;  <span class="comment">//输出阶梯数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>算法的运行结果：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Count the stairs =<span class="number">119</span></span><br></pre></td></tr></table></figure>
+<p>算法1-13中的while语句执行了119/7=17次，可见运行次数减少了不少呢！</p>
+<p>（5）问题的进一步讨论</p>
+<p>此题算法还可考虑求1、2、4、5的最小公倍数n，然后令t=n−1，判断t≡0(mod 7)是否成立，若不成立则t=t+n，再进行判别，直到选出满足条件的t为止。</p>
+<p>1、2、4、5的最小公倍数n=20。</p>
+<p>t=n-1=19，t≡0(mod 7)不成立；</p>
+<p>t= t+n=39，t≡0(mod 7)不成立；</p>
+<p>t= t+n=59，t≡0(mod 7)不成立；</p>
+<p>t= t+n=79，t≡0(mod 7)不成立；</p>
+<p>t= t+n=99，t≡0(mod 7)不成立；</p>
+<p>t= t+n=119，t≡0(mod 7)成立。</p>
+<p>我们可以看到这一算法判断6次即成功，但是，求多个数的最小公倍数需要多少时间复杂度，是不是比上面的算法更优呢？结果如何请大家动手试一试。</p>
+<h4 id="趣味故事1-5：哥德巴赫猜想">趣味故事1-5：哥德巴赫猜想</h4>
+<p>哥德巴赫猜想：任一大于2的偶数，都可表示成两个素数之和。</p>
+<p>验证：2000以内大于2的偶数都能够分解为两个素数之和。</p>
+<p>（1）问题分析</p>
+<p>为了验证哥德巴赫猜想对2000以内大于2的偶数都是成立的，要将整数分解为两部分（两个整数之和），然后判断分解出的两个整数是否均为素数。若是，则满足题意；否则重新进行分解和判断。素数测试的算法可采用试除法，即用2，3，4，…，<img class="my_markdown" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="D:/%25E9%25A1%25B9%25E7%259B%25AE/MarkdownBooks-master/Algorithm/%25E8%25B6%25A3%25E5%25AD%25A6%25E7%25AE%2597%25E6%25B3%2595/images/26.gif" style="width:25px;  height: 19px; "/>去除n，如果能被整除则为合数，不能被整除则为素数。</p>
+<p>（2）算法设计</p>
+<p>按照上面的分析进行算法设计，见算法1-14。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法1-14</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span> </span></span><br><span class="line"><span class="type">int</span> <span class="title function_">prime</span><span class="params">(<span class="type">int</span> n)</span>; <span class="comment">//判断是否均为素数</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123; </span><br><span class="line">  <span class="type">int</span> i,n; </span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">4</span>;i&lt;=<span class="number">2000</span>;i+=<span class="number">2</span>) <span class="comment">//对2000大于2的偶数分解判断，从4开始，每次增2</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">for</span>(n=<span class="number">2</span>;n&lt;i;n++)  <span class="comment">//将偶数i分解为两个整数，一个整数是n，一个是i-n</span></span><br><span class="line">      <span class="keyword">if</span>(prime(n))    <span class="comment">//判断第一个整数是否均为素数 </span></span><br><span class="line">         <span class="keyword">if</span>(prime(i-n))   <span class="comment">//判断第二个整数是否均为素数 </span></span><br><span class="line">         &#123; </span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt; i &lt;&lt;<span class="string">&quot;=&quot;</span> &lt;&lt; n &lt;&lt;<span class="string">&quot;+&quot;</span>&lt;&lt;i-n&lt;&lt;<span class="built_in">endl</span>;  <span class="comment">//若均是素数则输出 </span></span><br><span class="line">            <span class="keyword">break</span>; </span><br><span class="line">         &#125; </span><br><span class="line">     <span class="keyword">if</span>(n==i) </span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;error &quot;</span>&lt;&lt;<span class="built_in">endl</span>; </span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="type">int</span> <span class="title function_">prime</span><span class="params">(<span class="type">int</span> i)</span> <span class="comment">//判断是否为素数 </span></span><br><span class="line">&#123; </span><br><span class="line">  <span class="type">int</span> j; </span><br><span class="line">  <span class="keyword">if</span>(i&lt;=<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">  <span class="keyword">if</span>(i==<span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">  <span class="keyword">for</span>(j=<span class="number">2</span>;j&lt;=(<span class="type">int</span>)(<span class="built_in">sqrt</span>((<span class="type">double</span>)i);j++) </span><br><span class="line">    <span class="keyword">if</span>(!(i%j)) <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（3）算法分析</p>
+<p>要验证哥德巴赫猜想对2000以内大于2的偶数都是成立的，我们首先要看看这个范围的偶数有多少个。1～2000中有1000个偶数，1000个奇数，那么大于2的偶数有999个，即i=4，6，8，…，2000。再看偶数分解和素数判断，这就要看最好情况和最坏情况了。最好的情况是一次分解，两次素数判断即可成功，最坏的情况要i−2次分解（即n=2，3，…，i−1的情况），每次分解分别执行2～sqrt(n)次、2～sqrt(i−n)次判断。</p>
+<p>这个程序看似简单合理，但存在下面两个问题。</p>
+<p>1）偶数分解存在重复。</p>
+<ul>
+<li>i=4：分解为（2，2），（3，1），从n=2，3，…，i−1分解，每次得到一组数（n，i−n）。</li>
+<li>i=6：分解为（2，4），（3，3），（4，2），（5，1）。</li>
+<li>i=8：分解为（2，6），（3，5），（4，4），（5，3），（6，2），（7，1）。</li>
+</ul>
+<p>除了最后一项外，每组分解都在i/2处对称分布。最后一组中有一个数为1，1既不是素数也不是合数，因此去掉最后一组，那么我们就可以从n=2，3，…，i/2进行分解，省掉了一半的多余判断。</p>
+<p>2）素数判断存在重复。</p>
+<ul>
+<li>i=4：分解为（2，2），（3，1），要判断2是否为素数，然后判断第二个2是否为素数。判断成功，返回。</li>
+<li>i=6：分解为（2，4），（3，3），（4，2），（5，1），要判断2是否为素数，然后判断4是否为素数，不是继续下一个分解。再判断3是否为素数，然后判断第二个3是否为素数。判断成功，返回。</li>
+</ul>
+<p>每次判断素数都要调用prime函数，那么可以先判断分解有可能得到的数是否为素数，然后把结果存储下来，下次判断时只需要调用上次的结果，不需要再重新判断是否为素数。例如（2，2），第一次判断结果2是素数，那第二个2就不用判断，直接调用这个结果，后面所有的分解，只要遇到这个数就直接认定为这个结果。</p>
+<p>（4）算法改进</p>
+<p>先判断所有分解可能得到的数是否为素数，然后把结果存储下来，有以下两种方法。</p>
+<p>1）用布尔型数组 flag[2…1998]记录分解可能得到的数（2～1998）所有数是不是素数，分解后的值作为下标，调用该数组即可。时间复杂度减少，但空间复杂度增加。</p>
+<p>2）用数值型数组data[302]记录2～1998中所有的素数（302个）。</p>
+<ul>
+<li>分解后的值，采用折半查找（素数数组为有序存储）的办法在素数数组中查找，找到就是素数，否则不是。</li>
+<li>不分解，直接在素数数组中找两个素数之和是否为i，如果找到，验证成功。因为素数数组为有序存储，当两个数相加比i大时，不需要再判断后面的数。</li>
+</ul>
+<p>（5）问题的进一步讨论</p>
+<p>上面的方法可以写出3个算法，大家可以尝试写一写，然后分析时间复杂度、空间复杂度如何？哪个算法更优一些？是不是还可以做到更好？</p>
+<h3 id="1-5-算法学习瓶颈">1.5　算法学习瓶颈</h3>
+<p>很多人感叹：算法为什么这么难！</p>
+<p>一个原因是，算法本身具有一定的复杂性，还有一个原因：讲得不到位！</p>
+<p>算法的教与学有两个困难。</p>
+<p>（1）我们学习了那些经典的算法，在惊叹它们奇妙的同时，难免疑虑重重：这些算法是怎么被想到的？这可能是最费解的地方。高手讲，学算法要学它的来龙去脉，包括种种证明。但这对菜鸟来说，这简直比登天还难，很可能花费很多时间也无法搞清楚。对大多数人来说，这条路是行不通的，那怎么办呢？下功夫去记忆书上的算法？记住这些算法的效率？这样做看似学会了，其实两手空空，遇到一个新问题，仍然无从下手。可这偏偏又是极重要的，无论做研究还是实际工作，一个计算机专业人士最重要的能力就是解决问题——解决那些不断从实际应用中冒出来的新问题。</p>
+<p>（2）算法作为一门学问，有两条几乎平行的线索。一个是 <strong>数据结构</strong> （数据对象）：数、矩阵、集合、串、排列、图、表达式、分布等。另一个是 <strong>算法策略</strong> ：贪心、分治、动态规划、线性规划、搜索等。这两条线索是相互独立的：同一个数据对象（如图）上有不同的问题（如单源最短路径和多源最短路径），就可以用到不同的算法策略（例如贪婪和动态规划）；而完全不同的数据对象上的问题（如排序和整数乘法），也许就会用到相同的算法策略（如分治）。</p>
+<p>两条线索交织在一起，该如何表述？我们早已习惯在一章中完全讲排序，而在另一章中完全讲图论算法。还没有哪一本算法书很好地解决这两个困难，传统的算法书大多注重内容的收录，但却忽视思维过程的展示，因此我们学习了经典的算法，却费解于算法设计的过程。</p>
+<p>本书从问题出发，根据实际问题分析、设计合适的算法策略，然后在数据结构上操作实现，巧妙地将数据结构和算法策略拧成了一条线。通过大量实例，充分展现算法设计的思维过程，让读者充分体会求解问题的思路，如何分析？使用什么算法策略？采用什么数据结构？算法的复杂性如何？是否有优化的可能？</p>
+<p>这里，我们培养的是让读者怀着一颗好奇心去思考问题、解决问题。更重要的是——体会学习的乐趣，发现算法的美！</p>
+<h3 id="1-6-你怕什么">1.6　你怕什么</h3>
+<p>本章主要说明以下问题。</p>
+<p>（1）将程序执行次数作为时间复杂度衡量标准。</p>
+<p>（2）时间复杂度通常用渐近上界符号f(n)表示。</p>
+<p>（3）衡量算法的好坏通常考查算法的最坏情况。</p>
+<p>（4）空间复杂度只计算辅助空间。</p>
+<p>（5）递归算法的空间复杂度要计算递归使用的栈空间。</p>
+<p>（6）设计算法时尽量避免爆炸级增量复杂度。</p>
+<p>通过本章的学习，我们对算法有了初步的认识，算法就在我们的生活中。任何一个算法都不是凭空造出来的，而是来源于实际中的某一个问题，由此推及一类、一系列问题，所以算法的本质是高效地解决实际问题。本章部分内容或许你不是很清楚，不必灰心，还记得我在前言中说的“ <strong>大视野</strong> ， <strong>不求甚解</strong> ”吗？例如斐波那契数列的通项公式推导，不懂没关系，只要知道斐波那契数列用递归算法，时间复杂度是指数阶，这就够了。就像一个面包师一边和面，一边详细讲做好面包要多少面粉、多少酵母、多大火候，如果你对如何做面包非常好奇，大可津津有味地听下去，如果你只是饿了，那么只管吃好了。</p>
+<p>通过算法，你可以与世界顶级大师进行灵魂交流，体会算法的妙处。</p>
+<p>Donald Ervin Knuth说：“程序就是蓝色的诗”。而这首诗的灵魂就是算法，走进算法，你会发现无与伦比的美！</p>
+<p>持之以恒地学习，没有什么是学不会的。行动起来，没有什么不可以！</p>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>趣学算法之算法之美</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://drie.cn/posts/87ab2347.html">https://drie.cn/posts/87ab2347.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>Drie🦋</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2024-07-01</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2024-07-01</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">投喂作者</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://drie.cn/donate/simple/images/WeChanSQ.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://drie.cn/donate/simple/images/WeChanSQ.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://drie.cn/donate/simple/images/AliPayQR.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://drie.cn/donate/simple/images/AliPayQR.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://source.drie.cn/badge/aowu.m4a"></audio><script defer="defer" src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/2013454d.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/img/default_cover_14.webp" onerror="onerror=null;src='/assets/r2.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Markdown语法与外挂标签写法汇总</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><svg class="meta_icon" style="width:22px;height:22px;position:relative;top:5px"><use xlink:href="#icon-mulu1"></use></svg><span style="font-weight:bold">目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%AE%97%E6%B3%95%E4%B9%8B%E7%BE%8E"><span class="toc-text">第一章  算法之美</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%89%93%E5%BC%80%E7%AE%97%E6%B3%95%E4%B9%8B%E9%97%A8"><span class="toc-text">1.1　打开算法之门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%A6%99%E4%B8%8D%E5%8F%AF%E8%A8%80%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E6%80%A7"><span class="toc-text">1.2　妙不可言——算法复杂性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E7%BE%8E%E4%B8%8D%E8%83%9C%E6%94%B6%E2%80%94%E2%80%94%E9%AD%94%E9%AC%BC%E5%BA%8F%E5%88%97"><span class="toc-text">1.3　美不胜收——魔鬼序列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%A3%E5%91%B3%E6%95%85%E4%BA%8B1-1%EF%BC%9A%E4%B8%80%E6%A3%8B%E7%9B%98%E7%9A%84%E9%BA%A6%E5%AD%90"><span class="toc-text">趣味故事1-1：一棋盘的麦子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%A3%E5%91%B3%E6%95%85%E4%BA%8B1-2%EF%BC%9A%E7%A5%9E%E5%A5%87%E5%85%94%E5%AD%90%E6%95%B0%E5%88%97"><span class="toc-text">趣味故事1-2：神奇兔子数列</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E7%81%B5%E9%AD%82%E4%B9%8B%E4%BA%A4%E2%80%94%E2%80%94%E9%A9%AC%E5%85%8B%E6%80%9D%E6%89%8B%E7%A8%BF%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%A6%E9%A2%98"><span class="toc-text">1.4　灵魂之交——马克思手稿中的数学题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%A3%E5%91%B3%E6%95%85%E4%BA%8B1-3%EF%BC%9A%E9%A9%AC%E5%85%8B%E6%80%9D%E6%89%8B%E7%A8%BF%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%A6%E9%A2%98"><span class="toc-text">趣味故事1-3：马克思手稿中的数学题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%A3%E5%91%B3%E6%95%85%E4%BA%8B1-4%EF%BC%9A%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6%E7%9A%84%E9%98%B6%E6%A2%AF"><span class="toc-text">趣味故事1-4：爱因斯坦的阶梯</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%A3%E5%91%B3%E6%95%85%E4%BA%8B1-5%EF%BC%9A%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3"><span class="toc-text">趣味故事1-5：哥德巴赫猜想</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%93%B6%E9%A2%88"><span class="toc-text">1.5　算法学习瓶颈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-%E4%BD%A0%E6%80%95%E4%BB%80%E4%B9%88"><span class="toc-text">1.6　你怕什么</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background-color: transparent;"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">格言🧬</p><div class="bg-ad"><div>再看看那个光点，它就在这里，这是家园，这是我们 —— 你所爱的每一个人，你认识的一个人，你听说过的每一个人，曾经有过的每一个人，都在它上面度过他们的一生✨</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://stellarium.org/">点击开启星辰之旅</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">猜你想看💡</p><ul class="ft-links"><li><a href="/posts/eec9786.html">魔改指南</a><a href="/box/nav/">网址导航</a></li><li><a href="/social/link/">我的朋友</a><a href="/comments/">留点什么</a></li><li><a href="/personal/about/">关于作者</a><a href="/archives/">文章归档</a></li><li><a href="/categories/">文章分类</a><a href="/tags/">文章标签</a></li><li><a href="/box/Gallery/">我的画廊</a><a href="/personal/bb/">我的唠叨</a></li><li><a href="/site/time/">建设进程</a><a href="/site/census/">网站统计</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链⌛</p><div class="ft-img-group"><div class="img-group-item"><a href="https://drie.cn/" title="drie🦋"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://drie.cn/img/avatar.gif" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://lskypro.acozycotage.net/LightPicture/2022/12/65307a5828af6790.webp" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2023-2024</b></span><span><b>&nbsp;&nbsp;By Drie🦋</b></span></div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/badge/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/badge/Theme-Butterfly-6513df.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/badge/Hosted-Vercel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://user.51.la/" style="margin-inline:5px" title="本站数据分析得益于51la技术支持"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/badge/Analytics-51la-3db1eb.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20226665" style="margin-inline:5px" title="本站已加入萌ICP豪华套餐，萌ICP备20226665号"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/badge/萌ICP备-20246897-fe1384.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://bitiful.dogecast.com/buckets" style="margin-inline:5px" title="本网站经Service Worker分流至缤纷云对象存储"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://source.drie.cn/badge/Bucket-缤纷云-9c62da.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://www.netdun.net/" style="margin-inline:5px" title="本站使用网盾星球提供CDN加速与防护"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/badge/CDN-网盾星球-fff2cc.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src=" https://source.drie.cn/badge/Source-Github-d021d6.svg" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="share" type="button" title="右键模式" onclick="changeMouseMode()"><i class="fas fa-mouse"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog right_side"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:randomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:switchNightMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="/personal/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://source.drie.cn/js/fancybox.umd.min.js"></script><script src="https://source.drie.cn/js/instantpage.min.js" type="module"></script><script src="https://source.drie.cn/js/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 5000);
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.drie.cn/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.drie.cn/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="https://source.drie.cn/js/jquery.min.js"></script><script async src="https://source.drie.cn/js/vue.min.js"></script><script async src="https://source.drie.cn/js/index.js"></script><script async src="https://source.drie.cn/js/clipboard.min.js"></script><script defer type="text/javascript" src="https://source.drie.cn/js/sweetalert2.all.js"></script><script async src="https://source.drie.cn/js/pace.min.js"></script><script defer src="https://source.drie.cn/js/winbox.bundle.min.js"></script><script async src="https://source.drie.cn/js/font_3586335_hsivh70x0fm.js"></script><script async src="https://source.drie.cn/js/font_3636804_gr02jmjr3y9.js"></script><script async src="https://source.drie.cn/js/font_3612150_kfv55xn3u2g.js"></script><script async src="https://source.drie.cn/js/Gold-ingot.js"></script><canvas id="universe"></canvas><canvas id="snow"></canvas><script defer src="/js/drie.js"></script><link rel="stylesheet" href="https://source.drie.cn/js/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://source.drie.cn/js/APlayer.min.js"></script><script src="https://source.drie.cn/js/Meting.min.js"></script><script src="https://source.drie.cn/js/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://drie.cn/categories/算法/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍡 小Dの算法学习笔记 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://drie.cn/categories/演示/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍥 小Dの案例演示笔记 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://drie.cn/categories/" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #e9e9e9;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: var(--text-bg-hover)}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/img/default_cover_14.webp" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-01</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">Markdown语法与外挂标签写法汇总</a><div class="blog-slider__text">🥧本文汇总Markdown格式以及外挂标签在网页端的渲染效果，可作为文档进行查询</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/2013454d.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/87ab2347.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.drie.cn/qxsf-images/60.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-01</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/87ab2347.html&quot;);" href="javascript:void(0);" alt="">趣学算法之算法之美</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/87ab2347.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://source.drie.cn/js/swiper.min.js"></script><script defer data-pjax src="https://source.drie.cn/js/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://source.drie.cn/js/wow.min.js"></script><script defer src="https://source.drie.cn/js/wow_init.js"></script><script data-pjax src="https://source.drie.cn/js/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('gitZone');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 320px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('gitZone') && (location.pathname ==='/site/census/'|| '/site/census/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("/api?null",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'null')
+    }
+  </script><!-- hexo injector body_end end --></body></html>
