@@ -3174,9 +3174,9 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://source.drie.cn/img/dm14.webp);
+    --default-bg: url(https://source.drie.cn/img/default_cover_89.webp);
     --darkmode-bg:url(https://source.drie.cn/img/yuanshen1.webp);
-    --mobileday-bg: url(https://source.drie.cn/img/snow.webp);
+    --mobileday-bg: url(https://source.drie.cn/img/mb18.webp);
     --mobilenight-bg: url(https://source.drie.cn/img/mb8.webp);
   }`;
 }
